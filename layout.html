@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Admin Panel - Kopi Kita POS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="admin-layout">
+    <aside class="admin-sidebar">
+      <h3>Template Layout</h3>
+      <p>Struktur dasar admin panel berisi sidebar, header/navbar, content area, dan footer.</p>
+
+      <nav class="sidebar-links">
+        <a class="active" href="layout.html"><i class="fa-solid fa-layer-group"></i> Layout</a>
+        <a href="pages/dashboard.html"><i class="fa-solid fa-table-cells"></i> Dashboard</a>
+        <a href="pages/data-master.html"><i class="fa-solid fa-boxes-stacked"></i> Data Master</a>
+        <a href="pages/form.html"><i class="fa-regular fa-pen-to-square"></i> Form</a>
+        <a href="pages/report.html"><i class="fa-regular fa-file-lines"></i> Laporan</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <section class="page-top">
+        <div>
+          <h1>Master Template Admin Panel</h1>
+          <p>File ini menjadi output Milestone 2: slicing dan layouting dasar dari rancangan UI ke HTML/CSS.</p>
+        </div>
+        <button class="btn btn-secondary" id="sidebarToggle" type="button">
+          <i class="fa-solid fa-bars"></i>
+          Toggle Sidebar
+        </button>
+      </section>
+
+      <section class="card-panel">
+        <h2>Content Area</h2>
+        <p style="margin-top:8px;color:#667085;line-height:1.7;">
+          Area ini digunakan sebagai tempat konten halaman spesifik seperti dashboard, tabel data master,
+          form input/edit, dan laporan. Layout memakai CSS Grid untuk struktur utama dan Flexbox untuk komponen.
+        </p>
+      </section>
+
+      <section class="card-panel">
+        <h2>Komponen Layout</h2>
+        <div class="form-grid" style="margin-top:16px;">
+          <div class="card-panel" style="margin:0;"><strong>Navbar/Header</strong><p style="color:#667085;margin-top:8px;">Navigasi utama aplikasi.</p></div>
+          <div class="card-panel" style="margin:0;"><strong>Sidebar</strong><p style="color:#667085;margin-top:8px;">Navigasi sekunder admin.</p></div>
+          <div class="card-panel" style="margin:0;"><strong>Content</strong><p style="color:#667085;margin-top:8px;">Tempat isi halaman.</p></div>
+          <div class="card-panel" style="margin:0;"><strong>Footer</strong><p style="color:#667085;margin-top:8px;">Informasi sistem dan demonstrasi.</p></div>
+        </div>
+      </section>
+
+      <footer class="admin-footer">
+        © 2026 Kopi Kita POS - Admin Panel Client-Side.
+      </footer>
+    </main>
+  </section>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kopi Kita POS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/pos.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<!-- PRODUK -->
+<section class="products-section">
+
+<!-- CATEGORY -->
+<div class="category-bar">
+
+<button class="category active">
+Semua
+</button>
+
+<button class="category">
+Kopi
+</button>
+
+<button class="category">
+Non-Kopi
+</button>
+
+<button class="category">
+Makanan
+</button>
+
+<button class="category">
+Snack
+</button>
+
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="products-grid" id="productGrid"></div>
+
+</section>
+
+<!-- CART -->
+<aside class="cart-panel">
+
+<div class="cart-header">
+
+<div class="cart-top">
+
+<h2>Pesanan Saat Ini</h2>
+
+<span
+id="clearCartBtn"
+class="clear-cart"
+onclick="clearCart()">
+Hapus Semua
+</span>
+
+</div>
+
+<p id="cartCount">0 item</p>
+
+</div>
+
+<div class="cart-body" id="cartItems">
+
+<div class="empty-cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<p>Keranjang masih kosong</p>
+
+</div>
+
+</div>
+
+<div class="cart-footer">
+
+<div class="summary">
+
+<div>
+<span>Subtotal</span>
+<b id="subtotal">Rp 0</b>
+</div>
+
+<div>
+<span>Pajak (10%)</span>
+<b id="tax">Rp 0</b>
+</div>
+
+</div>
+
+<div class="total">
+
+<span>Total</span>
+
+<h2 id="total">
+Rp 0
+</h2>
+
+</div>
+
+<button id="payBtn">
+Proses Pembayaran
+</button>
+
+</div>
+
+</aside>
+
+</div>
+
+<<script src="assets/js/navbar.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+
+<!-- PAYMENT MODAL -->
+
+<div class="modal-overlay" id="paymentModal">
+
+<div class="payment-modal">
+
+<div class="modal-header">
+
+<h2>Pembayaran</h2>
+
+<button
+class="close-modal"
+onclick="closePaymentModal()">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="payment-total">
+
+<p>Total Pembayaran</p>
+
+<h1 id="modalTotal">
+Rp 0
+</h1>
+
+</div>
+
+<div class="form-group">
+
+<label>Nama Pelanggan (Opsional)</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Masukkan nama pelanggan">
+
+</div>
+
+<div class="form-group">
+
+<label>Metode Pembayaran</label>
+
+<div class="payment-methods">
+
+<button
+class="method-btn active"
+data-method="Tunai">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Tunai</span>
+
+</button>
+
+<button
+class="method-btn"
+data-method="Kartu">
+
+<i class="fa-regular fa-credit-card"></i>
+
+<span>Kartu</span>
+
+</button>
+
+<button
+class="method-btn"
+data-method="QRIS">
+
+<i class="fa-solid fa-qrcode"></i>
+
+<span>QRIS</span>
+
+</button>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Uang Diterima</label>
+
+<input
+type="number"
+id="cashInput"
+placeholder="0">
+
+</div>
+
+<div class="quick-money">
+
+<button onclick="addMoney(50000)">
+Rp 50.000
+</button>
+
+<button onclick="addMoney(100000)">
+Rp 100.000
+</button>
+
+<button onclick="addMoney(150000)">
+Rp 150.000
+</button>
+
+<button onclick="addMoney(200000)">
+Rp 200.000
+</button>
+
+</div>
+
+<div class="change-box">
+
+<span>Kembalian</span>
+
+<h2 id="changeAmount">
+Rp 0
+</h2>
+
+</div>
+
+<button
+class="confirm-payment"
+onclick="processPayment()">
+
+Konfirmasi Pembayaran
+
+</button>
+
+</div>
+
+</div>
+
+<script src="assets/js/payment.js"></script>
+
+</body>
+</html>

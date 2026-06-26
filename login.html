@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Kopi Kita POS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <script src="assets/js/auth.js" defer></script>
+</head>
+<body class="login-body">
+  <main class="login-page">
+    <section class="login-hero">
+      <div class="brand-badge">
+        <i class="fa-solid fa-mug-hot"></i>
+      </div>
+
+      <div class="login-copy">
+        <span class="eyebrow">Coffee Shop POS</span>
+        <h1>Kopi Kita</h1>
+        <p>Masuk ke sistem kasir dan admin panel untuk mengelola transaksi, produk, dashboard, dan laporan penjualan.</p>
+      </div>
+
+      <div class="feature-list">
+        <div>
+          <i class="fa-solid fa-cash-register"></i>
+          <span>POS / Kasir</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Dashboard Penjualan</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <span>Data Master Produk</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-card">
+      <div class="login-card-header">
+        <h2>Login Admin</h2>
+        <p>Gunakan akun demo untuk masuk ke aplikasi.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="login-form-group">
+          <label for="username">Username</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-user"></i>
+            <input id="username" name="username" type="text" placeholder="Masukkan username" autocomplete="username">
+          </div>
+          <small class="login-error" id="usernameError"></small>
+        </div>
+
+        <div class="login-form-group">
+          <label for="password">Password</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="current-password">
+            <button class="toggle-password" id="togglePassword" type="button" aria-label="Tampilkan password">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <small class="login-error" id="passwordError"></small>
+        </div>
+
+        <div class="login-options">
+          <label class="remember-me">
+            <input id="rememberMe" type="checkbox" checked>
+            <span>Ingat saya</span>
+          </label>
+        </div>
+
+        <div class="alert-message" id="loginMessage"></div>
+
+        <button class="login-btn" type="submit">
+          <span>Masuk</span>
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+      </form>
+
+      <div class="demo-account">
+        <p><strong>Akun demo:</strong></p>
+        <p>Username: <code>admin</code> | Password: <code>admin123</code></p>
+        <p>Username: <code>kasir</code> | Password: <code>kasir123</code></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
